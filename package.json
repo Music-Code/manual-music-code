@@ -1,0 +1,24 @@
+{
+  "name": "manual-music-code",
+  "version": "1.0.0",
+  "description": "Manual que marca las pautas de organización y actuación del proyecto Music Code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Music-Code/manual-music-code.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Music-Code/manual-music-code/issues"
+  },
+  "homepage": "https://github.com/Music-Code/manual-music-code#readme",
+  "dependencies": {
+    "clean-jsdoc-theme": "^3.2.10",
+    "jsdoc": "^3.6.7"
+  }
+}

@@ -1,0 +1,23 @@
+{
+    "plugins": ["plugins/markdown"],
+    "source":{
+        "include" : ["src"],
+        "includePattern": ".js$",
+        "excludePattern": "(node_modules/docs)"
+    },
+    "templates":{
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+    "opts":{
+        "recurse": "true",
+        "destination": "./doc",
+        "templates": "node_modules/clean-jsdoc-theme",
+        "tutorials": "./tutorials",
+        "template": "node_modules/clean-jsdoc-theme",
+        "theme_opts": {
+            "theme": "light"
+        }
+        
+    }
+}
