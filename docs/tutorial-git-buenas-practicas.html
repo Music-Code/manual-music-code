@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Adding favicon -->
+    
+
+    <!-- Adding meta -->
+    
+
+    <!-- Adding external script-->
+    
+
+    <!-- Adding external style-->
+    
+
+    <!-- Adding scripts-->
+    
+
+    <!-- Adding style-->
+    
+
+    <!-- Adding overlay script-->
+    
+
+    <!-- Adding overlay style-->
+    
+
+
+    <title>
+      Tutorial: Git Buenas Prácticas
+    </title>
+
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/third-party/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/third-party/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/reset.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-base.css">
+    <link type="text/css" rel="stylesheet" href="styles/clean-jsdoc-theme-light.css">
+    
+    <svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    style="display:none">
+    <defs>
+        <symbol id="copy-icon" viewbox="0 0 488.3 488.3">
+            <g>
+                <path
+                    d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z" />
+                <path
+                    d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z" />
+            </g>
+        </symbol>
+        <symbol id='search-icon' viewBox="0 0 512 512">
+            <g>
+                <g>
+                    <path
+                        d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z" />
+                </g>
+            </g>
+            <g>
+                <g>
+                    <path
+                        d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z" />
+                </g>
+            </g>
+        </symbol>
+        <symbol id="down-icon" viewBox="0 0 16 16">
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"
+            >
+            </path>
+        </symbol>
+    </defs>
+</svg>
+  </head>
+
+  <body>
+
+    <nav class="navbar" id="navbar">
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9558879" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      
+
+    </nav>
+    <div class="navbar-ham" id="navbar-ham">
+      <div>
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+      </div>
+    </div>
+
+    <div id="main" class="main-content">
+      
+      <h1 id='page-title' class="page-title">
+        Tutorial: Git Buenas Prácticas
+      </h1>
+      
+
+      <section>
+
+<header>
+    
+
+    <h2>Git Buenas Prácticas</h2>
+</header>
+
+<article>
+    <p>Durante el desarrollo de un proyecto es muy recomendable contar con una guía de buenas prácticas para la creación de ramas y commits. Esta guía pretende ser clara y debe ayudar a cualquier miembro del equipo.</p>
+<p>Con esto pretendemos llevar la comunicación y coordinación del equipo de la mejor forma para que el proyecto sea limpio y claro.</p>
+<h1>🌿 Manejo de Ramas</h1>
+<p>Durante el desarrollo vamos a crear branches/ramas para poder trabajar de manera aislada y poder realizar todos los cambios, correcciones y nuevas características del proyecto sin afectar el flujo de trabajo del resto del equipo, así evitaremos mezclar código de distintas líneas de desarrollo. Para poder gestionarnos bien seguiremos los siguentes estándares y buenas prácticas.</p>
+<h3>- Estructura</h3>
+<p>El nombre de una rama se estructura de 3 partes diferentes el tipo, modulo y caracteristica, estas partes son divididas usando &quot;_&quot; como se muestra en nuestra en el ejemplo siguiente.</p>
+<pre class="prettyprint source lang-GIT"><code>tipo_modulo_caracteristica
+
+</code></pre>
+<blockquote>
+<p>Los nombres de las ramas tienen que ser escritos en <strong>lowerCamelCase</strong>.</p>
+</blockquote>
+<h3>- Tipo:</h3>
+<p>El tipo es la primer parte de la estructura de la rama y hace referencia a la acción que se está realizando:</p>
+<ul>
+<li><strong>feat</strong>: Se generan una nueva funcionalid.</li>
+<li><strong>fix</strong>: Se realizan correción de Bugs.</li>
+<li><strong>refactor</strong>: Refactorización de funcionalidades y mejoras.</li>
+<li><strong>delete</strong>: Se eliminan funciones o archivos.</li>
+<li><strong>docs</strong>: Se generar cambios en la documentación.</li>
+<li><strong>hotfix</strong>: Esta tipo se utiliza cuando se quiere hacer un contrato con el diablo.</li>
+</ul>
+<h3>- Módulo:</h3>
+<p>Segunda parte de la estructura de la rama y hace referencia a sobre qué se está desarrollando. El módulo no debe constar de más de 15 caracteres</p>
+<h3>- Característica:</h3>
+<p>Tercera parte de la estructura de la rama. Este nombre nos indica exacatamente que funcionabilidad del modulo se está. Puede ser un nombre subjetivo pero siempre descriptivo. Además no debe superar los los 30 caracteres.</p>
+<h3>Ejemplo</h3>
+<pre class="prettyprint source"><code>feat_usuario_updateUsuario
+</code></pre>
+<h1>📌  Manejo de Commits</h1>
+<p>Los mensajes de commits deben ser claros y ayudar a cualquier miembro del equipo. Debemos evitar que estos mensajes cada vez se vuelven menos informativos y podemos encontrar mensajes como &quot;ya funciona esto&quot; lo cual da lugar mensajes ni descriptivos y peor aún en ocasiones ni el responsable recuerda o sabe lo que generó.</p>
+<p>Por ello, el mensaje de un commit se divide en 3 partes diferentes el tipo: título, el cuerpo y pie como se muestra en el siguiente ejemplo.</p>
+<h3>- Tipo: Título:</h3>
+<p>El tipo es contenido en el título y puede ser de alguno de los siguientes casos:</p>
+<ul>
+<li>💫 FEAT: Una nueva característica.</li>
+<li>🛠️ FIX: Se soluciono un bug.</li>
+<li>📚 DOCS: Se realizaron cambios en la documentación.</li>
+<li>🌈 PRETT: Se aplico formato, comas y puntos faltantes, etc; Sin cambios en el código.</li>
+<li>♻ REFACT: Refactorización del código en producción.</li>
+<li>🔎 TEST: Se añadieron pruebas, refactorización de pruebas; Sin cambios en el código.</li>
+<li>☠️ DELETE: Se eliminan funciones o archivos.</li>
+<li>💚 CHORE: Actualización de tareas de build, configuración del admin. de paquetes; Sin cambios en el código.</li>
+</ul>
+<p><strong>Subject/Asunto</strong></p>
+<ul>
+<li>Comunica qué hace el cambio sin necesidad de mirar al código fuente</li>
+<li>El asunto no debe contener más de <strong>50 caracteres</strong>,</li>
+<li>Iniciar con una letra mayúscula y</li>
+<li><strong>NO</strong> terminar con un punto.</li>
+<li>Usa el imperativo al momento de redactar nuestro commit, es decir, hay que ser objetivos.</li>
+</ul>
+<h3>- Cuerpo</h3>
+<p>Usa el cuerpo del mensaje para explicar <strong>&quot;por qué&quot;</strong>, <strong>&quot;para qué&quot;</strong>, <strong>&quot;cómo&quot;</strong> y detalles adicionales.
+Por tanto, cuando el por qué de un cambio no quede suficientemente claro con el asunto y el diff del commit, usaremos el cuerpo del mensaje de commit para aportar un contexto y un por qué a dichos cambios. Esto es especialmente importante si existen soluciones alternativas a la implementada en el commit, ya que así los futuros mantenedores del código pueden saber por qué se elegió esa solución frente a otras alternativas.
+Si el cambio realizado, además, puede tener consecuencias inesperadas o efectos secundarios en el resto del código, es importante especificarlo también en el mensaje de commit.</p>
+<ul>
+<li>72 caracteres máximo</li>
+<li>El asunto y el cuerpo del mensaje se separan por una línea en blanco. Las líneas en blanco adicionales pasan a ser consideradas parte del cuerpo del mensaje.</li>
+</ul>
+<h3>- Footer</h3>
+<p>Esta parte es muy importante ya que es donde se coloca el seguimiento de los issues o tickets relacionados con los cambios generados.</p>
+<ul>
+<li>Para poder referencias un issue en el commit siempre se tiene que colocar # seguida del número de issue. Este issue estará relacionado con Trello.</li>
+</ul>
+<blockquote>
+<p>Escribirlo en <strong>Inglés</strong> es una de las mejores prácticas que podemos tener.</p>
+</blockquote>
+<h2>Ejemplo 1</h2>
+<pre class="prettyprint source lang-GIT"><code>📚 DOCS: Redaccion de reglas para commits.
+
+En la seccion de Wiki se redactaron las buenas prácticas para los commits
+
+Issue: #1
+
+</code></pre>
+<h2>Ejemplo 2</h2>
+<pre class="prettyprint source lang-GIT"><code>💫 FEAT: Summarize changes in around 50 characters or less
+
+More detailed explanatory text, if necessary. Wrap it to about 72
+characters or so. In some contexts, the first line is treated as the
+subject of the commit and the rest of the text as the body. The
+blank line separating the summary from the body is critical (unless
+you omit the body entirely); various tools like `log`, `shortlog`
+and `rebase` can get confused if you run the two together.
+
+Explain the problem that this commit is solving. Focus on why you
+are making this change as opposed to how (the code explains that).
+Are there side effects or other unintuitive consequences of this
+change? Here's the place to explain them.
+
+Further paragraphs come after blank lines.
+
+ - Bullet points are okay, too
+
+ - Typically a hyphen or asterisk is used for the bullet, preceded
+   by a single space, with blank lines in between, but conventions
+   vary here
+
+If you use an issue tracker, put references to them at the bottom,
+like this:
+
+Resolves: #123
+See also: #456, #789
+
+</code></pre>
+</article>
+
+</section>
+
+    </div>
+
+    <footer class="footer" id="footer">
+      
+    </footer>
+
+    <script src="scripts/third-party/prettify.js"></script>
+    <script src="scripts/third-party/lang-css.js"></script>
+    <script type="text/javascript" src="scripts/misc.js"></script>
+
+    <script>prettyPrint();</script>
+    <script src="scripts/linenumber.js"></script>
+    <script src="scripts/fix-code-block.js"></script>
+    <script src="scripts/fix-navbar.js"></script>
+    
+      <script src="scripts/search.js"></script>
+      <script src="scripts/third-party/fuse.js"></script>
+      <script>
+        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
+        var options = 
+          setupSearch(list, options)
+      </script>
+    
+
+    
+
+    
+
+    
+
+    
+
+
+  </body>
+
+</html>
