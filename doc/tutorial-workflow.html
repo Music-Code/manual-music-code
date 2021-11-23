@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="4171769" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-github.html">Github</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="316949" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
       
 
     </nav>
@@ -141,6 +141,7 @@
 <li>Se desarrolla en la rama feature y se hacen los commits</li>
 <li>Una vez finalizados los cambios en <strong>feature</strong> se hace una <strong>Pull Request</strong></li>
 <li>A través de Github Actions, revisión de test y equipo se mergea a la rama <strong>develop</strong></li>
+<li>Se borra la rama <strong>feature</strong> creada para este propósito</li>
 <li>Se hace deploy de la rama <strong>develop</strong></li>
 <li>Si hubiese algo que solucionar se crea una rama <strong>hotfix</strong></li>
 <li>Una vez funciona el deploy se mergea <strong>develop</strong> con <strong>main</strong></li>
@@ -168,7 +169,7 @@
       <script src="scripts/search.js"></script>
       <script src="scripts/third-party/fuse.js"></script>
       <script>
-        var list = [{"title":"github","link":"github"},{"title":"workflow","link":"workflow"}];
+        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
         var options = 
           setupSearch(list, options)
       </script>

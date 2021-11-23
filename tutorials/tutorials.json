@@ -1,8 +1,11 @@
 {
+    "git-guide": {
+        "title": "Git Guía"
+    },
+    "git-buenas-practicas": {
+        "title": "Git Buenas Prácticas"
+    },
     "workflow": {
         "title": "Workflow"
-        },
-        "github": {
-            "title": "Github"
-        }
+    }
 }
