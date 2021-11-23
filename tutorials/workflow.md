@@ -24,7 +24,7 @@ Las ramas de apoyo son:
 
 - **hotfix**: la utilizaremos para arreglar código y bugs, por haberse detectado un defecto crítico o que el cliente haya pedido algún cambio. Esta rama se usará de manera excepcional puesto que el deploy se hará de manera contínua y siempre testeado. Esta rama siempre saldrá de main y una vez hechos los cambios se devuelve a *develop*, se hace el deploy y se agrega a *main*
 
-<center><img src = "../src/img/hotfix-branch.png" width = "800" alt = "ejemplo" background="red"/></center>
+<center><img src = "../tutorials/img/hotfix-branch.png" width = "800" alt = "ejemplo" background="red"/></center>
 
 
 
@@ -41,4 +41,4 @@ Las ramas de apoyo son:
 9. Si hubiese algo que solucionar se crea una rama **hotfix**
 10. Una vez funciona el deploy se mergea **develop** con **main**  
 
-<center><img src = "../src/img/feature-branch.png" width = "800" alt = "ejemplo" background="red"/></center>
+<center><img src = "../tutorials/img/feature-branch.png" width = "800" alt = "ejemplo" background="red"/></center>

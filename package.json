@@ -4,7 +4,7 @@
   "description": "Manual que marca las pautas de organización y actuación del proyecto Music Code",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d doc"
   },
   "repository": {
     "type": "git",
