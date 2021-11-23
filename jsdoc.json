@@ -11,19 +11,20 @@
     },
     "templates": {
         "cleverLinks": false,
-        "monospaceLinks": false
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true,
+            "staticFiles": {
+                "include": [
+                    "tutorials"
+                ],
+                "includePattern": ".(png|jpg)$"
+            }
+        }
     },
     "opts": {
         "recurse": "true",
         "destination": "./docs",
-        "templates": "node_modules/clean-jsdoc-theme",
-        "default": {
-            "staticFiles": {
-                "paths": [
-                    "./tutorials/img/"
-                ]
-            }
-        },
         "tutorials": "./tutorials",
         "template": "node_modules/clean-jsdoc-theme",
         "theme_opts": {
