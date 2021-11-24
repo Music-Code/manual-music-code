@@ -31,7 +31,7 @@
 
 
     <title>
-      Home
+      Tutorial: GitFlow Comandos
     </title>
 
     <!--[if lt IE 9]>
@@ -97,28 +97,66 @@
 
     <div id="main" class="main-content">
       
-
+      <h1 id='page-title' class="page-title">
+        Tutorial: GitFlow Comandos
+      </h1>
       
 
+      <section>
 
-
+<header>
     
 
+    <h2>GitFlow Comandos</h2>
+</header>
 
+<article>
+    <p>En este tutorial veremos cuáles son los comandos báiscos de GitFlow y que no servirán para poder colaborar todos sobre el repositorio del proyecto</p>
+<h1>Primeros Pasos</h1>
+<ol>
+<li>Creamos una carpeta en local que se llame music-code.</li>
+<li>vamos al github de la organización y elegimos el repositorio que deseamos clonar. Por ejemplo &quot;backend&quot;</li>
+<li>Copiamos la url del repositorio</li>
+<li>En la terminal sobre la carpeta music-code</li>
+</ol>
+<pre class="prettyprint source lang-GIT"><code>git clone https://github.com/Music-Code/backend.git
+</code></pre>
+<p>Ahora ya aparecerá nuestro repositorio en local y con la configuración del repositorio.</p>
+<h1>Creación Ramas</h1>
+<ul>
+<li><strong>main</strong> viene por defecto una vez creado el repositorio</li>
+<li><strong>develop</strong> se crea y <strong>SOLO SE CREA UNA VEZ</strong></li>
+</ul>
+<h3>Inicia el repositorio y crea las ramas <em>main</em> y <em>develop</em></h3>
+<pre class="prettyprint source lang-GIT"><code>git flow init
+</code></pre>
+<blockquote>
+<p>Se ejecuta solo una vez al inicio del proyecto</p>
+</blockquote>
+<h2>feature</h2>
+<h3>Crea una nueva rama para un feature a partir de la rama <em>develop</em></h3>
+<pre class="prettyprint source lang-GIT"><code>git flow feature start users_add_user
+</code></pre>
+<p>A la rama creada se le agrega el tipo feature automaticamente. En este ejemplo el nombre final de la rama sería feature/users_add_user</p>
+<blockquote>
+<p>users_add_user solo <strong>es un ejemplo</strong> del nombre de la rama</p>
+</blockquote>
+<h3>Terminar un feature y unirla a develop</h3>
+<pre class="prettyprint source lang-GIT"><code>git flow feature finish users_add_user
+</code></pre>
+<h2>Hotfix</h2>
+<p>Inicia una rama hotfix a partir de <em>main</em></p>
+<pre class="prettyprint source lang-GIT"><code>git flow hotfix start users_add_user
+</code></pre>
+<p>A la rama creada se le agrega el tipo hotfix automaticamente. En este ejemplo el nombre final de la rama sería hotfix/users_add_user</p>
+<p>Terminar un hotfix y unirlo a las ramas <em>main</em> y <em>develop</em></p>
+<pre class="prettyprint source lang-GIT"><code>git flow hotfix finish users_add_user
+</code></pre>
+<!--
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow -->
+</article>
 
-
-
-
-
-
-
-    
-
-
-
-
-
-
+</section>
 
     </div>
 

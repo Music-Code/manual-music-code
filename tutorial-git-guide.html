@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9558879" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="1247394" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
       
 
     </nav>
@@ -127,38 +127,49 @@
 <li><strong>main</strong> viene por defecto una vez creado el repositorio</li>
 <li><strong>develop</strong> se crea y <strong>SOLO SE CREA UNA VEZ</strong></li>
 </ul>
-<pre class="prettyprint source lang-GIT"><code>// Creamos la rama y nos movemos a ella
-// Ya está creada
+<pre class="prettyprint source lang-GIT"><code># Creamos la rama y nos movemos a ella
+# Ya está creada
 git checkout -b develop
 
-// Subir rama al github
-git push origin develop
+# Subir rama al github
+git push -u origin develop
 
 </code></pre>
 <ul>
 <li><strong>feature</strong></li>
 </ul>
-<pre class="prettyprint source lang-GIT"><code>git checkout -b feat_user_AddUser
+<pre class="prettyprint source lang-GIT"><code>git checkout -b feature/user_add_user
+
+# De otro forma
+git switch -c feature/user_add_user
 </code></pre>
-<p>para subir la rama al github, en caso de que sea necesario</p>
-<pre class="prettyprint source lang-GIT"><code>git push origin feat_user_AddUser
-</code></pre>
+<blockquote>
+<p>Recuerde que se debe estar en la rama develop para crear un feature</p>
+</blockquote>
 <h3>Comprobar las ramas que tenemos</h3>
 <pre class="prettyprint source lang-GIT"><code>git branch
 </code></pre>
 <h3>Moverse a otras ramas</h3>
-<pre class="prettyprint source lang-GIT"><code>git checkout nombre_rama
+<pre class="prettyprint source lang-GIT"><code>git switch nombre_rama
+
+# De otro forma
+git checkout nombre_rama
 </code></pre>
-<h3>Ver si tenemos la última actualización</h3>
-<p>Si deseamos que la rama feat_user_AddUser nos diga si se ha realizado cambios en develop que pueden afectarnos debemos hacerle seguimiento a la rama develop desde la rama feat_user_AddUser</p>
-<pre class="prettyprint source lang-GIT"><code>git branch --set-upstream-to=origin/develop feat_user_AddUser
-</code></pre>
-<p>Una vez hecho el seguimiento se puede comprobar si ha habido cambios</p>
-<pre class="prettyprint source lang-GIT"><code>git pull
-</code></pre>
-<blockquote>
-<p>Revisad que siempre estemos en la rama correspondiente y nunca en <strong>main</strong> o <strong>develop</strong> a no ser que sea estrictamente necesario.</p>
-</blockquote>
+<!-- ### Ver si tenemos la última actualización -->
+<!--
+Si deseamos que la rama feature/user_add_user nos diga si se ha realizado cambios en develop que pueden afectarnos debemos hacerle seguimiento a la rama develop desde la rama feature/user_add_user
+
+```GIT
+git branch --set-upstream-to=origin/develop feature/user_add_user
+```
+
+Una vez hecho el seguimiento se puede comprobar si ha habido cambios
+
+```GIT
+git pull
+```
+
+> Revisad que siempre estemos en la rama correspondiente y nunca en **main** o **develop** a no ser que sea estrictamente necesario. -->
 </article>
 
 </section>
@@ -181,7 +192,7 @@ git push origin develop
       <script src="scripts/search.js"></script>
       <script src="scripts/third-party/fuse.js"></script>
       <script>
-        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
+        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-flow-guide","link":"git-flow-guide"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
         var options = 
           setupSearch(list, options)
       </script>

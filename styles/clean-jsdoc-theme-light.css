@@ -1,12 +1,11 @@
 ::selection {
     background: #ffce76;
     color: #1d1919;
-    
 }
 
 body {
     background-color: #fff;
-    color: #2f343a;    
+    color: #2f343a;
 }
 
 a,
@@ -54,17 +53,8 @@ h2 {
     background-color: #000;
 }
 
-blockquote::before {
-content: "NOTA";
-color: #E7C002;
-font-size: 15px;
-}
-
 blockquote {
-    border-left: 5px solid #E7C002;
-    margin: 20px 0;
-    padding-top: 15px;
-    background: #FEF7D0;
+    background: #f7f7f7;
     color: #888;
 }
 
@@ -158,17 +148,13 @@ blockquote {
     color: #000;
 }
 
-/* .prettyprint{
-    margin: 0 100px 0 100px
-}
- */
 .prettyprint,
 .pre-top-bar-container {
-    background: #1a1e25;
+    background: #000;
 }
 
 .prettyprint code {
-    background-color: #1a1e25;
+    background-color: #000;
 }
 
 .prettyprint.linenums li {
@@ -249,7 +235,7 @@ table .params thead tr,
 }
 
 .pln {
-    color: #f8f8fa;
+    color: #f5d67b;
 }
 
 /* string content */

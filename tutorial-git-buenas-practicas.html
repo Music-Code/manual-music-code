@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9558879" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="1247394" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
       
 
     </nav>
@@ -116,32 +116,30 @@
 <h1>🌿 Manejo de Ramas</h1>
 <p>Durante el desarrollo vamos a crear branches/ramas para poder trabajar de manera aislada y poder realizar todos los cambios, correcciones y nuevas características del proyecto sin afectar el flujo de trabajo del resto del equipo, así evitaremos mezclar código de distintas líneas de desarrollo. Para poder gestionarnos bien seguiremos los siguentes estándares y buenas prácticas.</p>
 <h3>- Estructura</h3>
-<p>El nombre de una rama se estructura de 3 partes diferentes el tipo, modulo y caracteristica, estas partes son divididas usando &quot;_&quot; como se muestra en nuestra en el ejemplo siguiente.</p>
-<pre class="prettyprint source lang-GIT"><code>tipo_modulo_caracteristica
+<p>El nombre de una rama se estructura de 3 partes diferentes el tipo, modulo y característica, estas partes son divididas usando &quot;/&quot; y &quot;_&quot; como se muestra en nuestra en el ejemplo siguiente.</p>
+<pre class="prettyprint source lang-GIT"><code>tipo/modulo_caracteristica
 
 </code></pre>
 <blockquote>
-<p>Los nombres de las ramas tienen que ser escritos en <strong>lowerCamelCase</strong>.</p>
+<p>Los nombres de las ramas tienen que ser escritos en <strong>snake_case</strong>.</p>
 </blockquote>
 <h3>- Tipo:</h3>
 <p>El tipo es la primer parte de la estructura de la rama y hace referencia a la acción que se está realizando:</p>
 <ul>
-<li><strong>feat</strong>: Se generan una nueva funcionalid.</li>
-<li><strong>fix</strong>: Se realizan correción de Bugs.</li>
+<li><strong>feature</strong>: Se generan una nueva funcionalid.</li>
+<li><strong>hotfix</strong>: Se realizan correción de Bugs que se detectaron en la rema main y deben ser reparados urgentemente.</li>
 <li><strong>refactor</strong>: Refactorización de funcionalidades y mejoras.</li>
-<li><strong>delete</strong>: Se eliminan funciones o archivos.</li>
 <li><strong>docs</strong>: Se generar cambios en la documentación.</li>
-<li><strong>hotfix</strong>: Esta tipo se utiliza cuando se quiere hacer un contrato con el diablo.</li>
 </ul>
 <h3>- Módulo:</h3>
 <p>Segunda parte de la estructura de la rama y hace referencia a sobre qué se está desarrollando. El módulo no debe constar de más de 15 caracteres</p>
 <h3>- Característica:</h3>
-<p>Tercera parte de la estructura de la rama. Este nombre nos indica exacatamente que funcionabilidad del modulo se está. Puede ser un nombre subjetivo pero siempre descriptivo. Además no debe superar los los 30 caracteres.</p>
+<p>Tercera parte de la estructura de la rama. Este nombre nos indica exacatamente que funcionabilidad del modulo se está desarrollando. Puede ser un nombre subjetivo pero siempre descriptivo. Además no debe superar los los 30 caracteres.</p>
 <h3>Ejemplo</h3>
-<pre class="prettyprint source"><code>feat_usuario_updateUsuario
+<pre class="prettyprint source"><code>feature/usuario_update_user
 </code></pre>
-<h1>📌  Manejo de Commits</h1>
-<p>Los mensajes de commits deben ser claros y ayudar a cualquier miembro del equipo. Debemos evitar que estos mensajes cada vez se vuelven menos informativos y podemos encontrar mensajes como &quot;ya funciona esto&quot; lo cual da lugar mensajes ni descriptivos y peor aún en ocasiones ni el responsable recuerda o sabe lo que generó.</p>
+<h1>📌 Manejo de Commits</h1>
+<p>Los mensajes de commits deben ser claros y ayudar a cualquier miembro del equipo. Debemos evitar que estos mensajes cada vez se vuelven menos informativos y podemos encontrar mensajes como &quot;ya funciona esto&quot; lo cual da lugar mensajes no descriptivos y peor aún en ocasiones ni el responsable recuerda o sabe lo que generó.</p>
 <p>Por ello, el mensaje de un commit se divide en 3 partes diferentes el tipo: título, el cuerpo y pie como se muestra en el siguiente ejemplo.</p>
 <h3>- Tipo: Título:</h3>
 <p>El tipo es contenido en el título y puede ser de alguno de los siguientes casos:</p>
@@ -239,7 +237,7 @@ See also: #456, #789
       <script src="scripts/search.js"></script>
       <script src="scripts/third-party/fuse.js"></script>
       <script>
-        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
+        var list = [{"title":"git-buenas-practicas","link":"git-buenas-practicas"},{"title":"git-flow-guide","link":"git-flow-guide"},{"title":"git-guide","link":"git-guide"},{"title":"workflow","link":"workflow"}];
         var options = 
           setupSearch(list, options)
       </script>
