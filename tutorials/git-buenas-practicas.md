@@ -7,43 +7,47 @@ Con esto pretendemos llevar la comunicación y coordinación del equipo de la me
 Durante el desarrollo vamos a crear branches/ramas para poder trabajar de manera aislada y poder realizar todos los cambios, correcciones y nuevas características del proyecto sin afectar el flujo de trabajo del resto del equipo, así evitaremos mezclar código de distintas líneas de desarrollo. Para poder gestionarnos bien seguiremos los siguentes estándares y buenas prácticas.
 
 ### - Estructura
-El nombre de una rama se estructura de 3 partes diferentes el tipo, modulo y caracteristica, estas partes son divididas usando "_" como se muestra en nuestra en el ejemplo siguiente.
+
+El nombre de una rama se estructura de 3 partes diferentes el tipo, modulo y característica, estas partes son divididas usando "/" y "\_" como se muestra en nuestra en el ejemplo siguiente.
 
 ```GIT
-tipo_modulo_caracteristica
+tipo/modulo_caracteristica
 
 ```
 
->  Los nombres de las ramas tienen que ser escritos en **lowerCamelCase**.
+> Los nombres de las ramas tienen que ser escritos en **snake_case**.
 
-### - Tipo: 
+### - Tipo:
+
 El tipo es la primer parte de la estructura de la rama y hace referencia a la acción que se está realizando:
 
-- **feat**: Se generan una nueva funcionalid.
-- **fix**: Se realizan correción de Bugs.
+- **feature**: Se generan una nueva funcionalid.
+- **hotfix**: Se realizan correción de Bugs que se detectaron en la rema main y deben ser reparados urgentemente.
 - **refactor**: Refactorización de funcionalidades y mejoras.
-- **delete**: Se eliminan funciones o archivos.
 - **docs**: Se generar cambios en la documentación.
-- **hotfix**: Esta tipo se utiliza cuando se quiere hacer un contrato con el diablo.
 
 ### - Módulo:
+
 Segunda parte de la estructura de la rama y hace referencia a sobre qué se está desarrollando. El módulo no debe constar de más de 15 caracteres
 
 ### - Característica:
-Tercera parte de la estructura de la rama. Este nombre nos indica exacatamente que funcionabilidad del modulo se está. Puede ser un nombre subjetivo pero siempre descriptivo. Además no debe superar los los 30 caracteres.
+
+Tercera parte de la estructura de la rama. Este nombre nos indica exacatamente que funcionabilidad del modulo se está desarrollando. Puede ser un nombre subjetivo pero siempre descriptivo. Además no debe superar los los 30 caracteres.
 
 ### Ejemplo
 
 ```
-feat_usuario_updateUsuario
+feature/usuario_update_user
 ```
 
-# 📌  Manejo de Commits
-Los mensajes de commits deben ser claros y ayudar a cualquier miembro del equipo. Debemos evitar que estos mensajes cada vez se vuelven menos informativos y podemos encontrar mensajes como "ya funciona esto" lo cual da lugar mensajes ni descriptivos y peor aún en ocasiones ni el responsable recuerda o sabe lo que generó.
+# 📌 Manejo de Commits
+
+Los mensajes de commits deben ser claros y ayudar a cualquier miembro del equipo. Debemos evitar que estos mensajes cada vez se vuelven menos informativos y podemos encontrar mensajes como "ya funciona esto" lo cual da lugar mensajes no descriptivos y peor aún en ocasiones ni el responsable recuerda o sabe lo que generó.
 
 Por ello, el mensaje de un commit se divide en 3 partes diferentes el tipo: título, el cuerpo y pie como se muestra en el siguiente ejemplo.
 
 ### - Tipo: Título:
+
 El tipo es contenido en el título y puede ser de alguno de los siguientes casos:
 
 - 💫 FEAT: Una nueva característica.
@@ -56,26 +60,29 @@ El tipo es contenido en el título y puede ser de alguno de los siguientes casos
 - 💚 CHORE: Actualización de tareas de build, configuración del admin. de paquetes; Sin cambios en el código.
 
 **Subject/Asunto**
+
 - Comunica qué hace el cambio sin necesidad de mirar al código fuente
-- El asunto no debe contener más de **50 caracteres**, 
-- Iniciar con una letra mayúscula y 
-- **NO** terminar con un punto. 
+- El asunto no debe contener más de **50 caracteres**,
+- Iniciar con una letra mayúscula y
+- **NO** terminar con un punto.
 - Usa el imperativo al momento de redactar nuestro commit, es decir, hay que ser objetivos.
 
-
 ### - Cuerpo
+
 Usa el cuerpo del mensaje para explicar **"por qué"**, **"para qué"**, **"cómo"** y detalles adicionales.
 Por tanto, cuando el por qué de un cambio no quede suficientemente claro con el asunto y el diff del commit, usaremos el cuerpo del mensaje de commit para aportar un contexto y un por qué a dichos cambios. Esto es especialmente importante si existen soluciones alternativas a la implementada en el commit, ya que así los futuros mantenedores del código pueden saber por qué se elegió esa solución frente a otras alternativas.
 Si el cambio realizado, además, puede tener consecuencias inesperadas o efectos secundarios en el resto del código, es importante especificarlo también en el mensaje de commit.
+
 - 72 caracteres máximo
 - El asunto y el cuerpo del mensaje se separan por una línea en blanco. Las líneas en blanco adicionales pasan a ser consideradas parte del cuerpo del mensaje.
 
 ### - Footer
+
 Esta parte es muy importante ya que es donde se coloca el seguimiento de los issues o tickets relacionados con los cambios generados.
 
 - Para poder referencias un issue en el commit siempre se tiene que colocar # seguida del número de issue. Este issue estará relacionado con Trello.
 
->  Escribirlo en **Inglés** es una de las mejores prácticas que podemos tener.
+> Escribirlo en **Inglés** es una de las mejores prácticas que podemos tener.
 
 ## Ejemplo 1
 
@@ -120,8 +127,3 @@ Resolves: #123
 See also: #456, #789
 
 ```
-
-
-
-
-
