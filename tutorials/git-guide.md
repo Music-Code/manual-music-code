@@ -1,10 +1,11 @@
 En este tutorial veremos cuáles son los comandos báiscos de Git y que no servirán para poder colaborar todos sobre el repositorio del proyecto
 
 # Primeros Pasos
+
 1. Creamos una carpeta en local que se llame music-code.
-3. vamos al github de la organización y elegimos el repositorio que deseamos clonar. Por ejemplo "backend"
-4. Copiamos la url del repositorio
-5. En la terminal sobre la carpeta music-code
+2. vamos al github de la organización y elegimos el repositorio que deseamos clonar. Por ejemplo "backend"
+3. Copiamos la url del repositorio
+4. En la terminal sobre la carpeta music-code
 
 ```GIT
 git clone https://github.com/Music-Code/backend.git
@@ -18,26 +19,25 @@ Ahora ya aparecerá nuestro repositorio en local y con la configuración del rep
 - **develop** se crea y **SOLO SE CREA UNA VEZ**
 
 ```GIT
-// Creamos la rama y nos movemos a ella
-// Ya está creada
+# Creamos la rama y nos movemos a ella
+# Ya está creada
 git checkout -b develop
 
-// Subir rama al github
-git push origin develop
+# Subir rama al github
+git push -u origin develop
 
 ```
 
 - **feature**
 
 ```GIT
-git checkout -b feat_user_AddUser
+git checkout -b feature/user_add_user
+
+# De otro forma
+git switch -c feature/user_add_user
 ```
 
-para subir la rama al github, en caso de que sea necesario 
-
-```GIT
-git push origin feat_user_AddUser
-```
+> Recuerde que se debe estar en la rama develop para crear un feature
 
 ### Comprobar las ramas que tenemos
 
@@ -48,15 +48,18 @@ git branch
 ### Moverse a otras ramas
 
 ```GIT
+git switch nombre_rama
+
+# De otro forma
 git checkout nombre_rama
 ```
 
-### Ver si tenemos la última actualización
-
-Si deseamos que la rama feat_user_AddUser nos diga si se ha realizado cambios en develop que pueden afectarnos debemos hacerle seguimiento a la rama develop desde la rama feat_user_AddUser
+<!-- ### Ver si tenemos la última actualización -->
+<!--
+Si deseamos que la rama feature/user_add_user nos diga si se ha realizado cambios en develop que pueden afectarnos debemos hacerle seguimiento a la rama develop desde la rama feature/user_add_user
 
 ```GIT
-git branch --set-upstream-to=origin/develop feat_user_AddUser
+git branch --set-upstream-to=origin/develop feature/user_add_user
 ```
 
 Una vez hecho el seguimiento se puede comprobar si ha habido cambios
@@ -65,15 +68,4 @@ Una vez hecho el seguimiento se puede comprobar si ha habido cambios
 git pull
 ```
 
-
-
-
-> Revisad que siempre estemos en la rama correspondiente y nunca en **main** o **develop** a no ser que sea estrictamente necesario.
-
-
-
-
-
-
-
-
+> Revisad que siempre estemos en la rama correspondiente y nunca en **main** o **develop** a no ser que sea estrictamente necesario. -->
