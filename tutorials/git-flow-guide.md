@@ -13,6 +13,22 @@ git clone https://github.com/Music-Code/backend.git
 
 Ahora ya aparecerá nuestro repositorio en local y con la configuración del repositorio.
 
+Al abrir el repositorio podríamos pensar que sólo nos bajamos la rama principal (main) puesto que si ejecutamos el comando git branch sólo nos lista la rama main.
+
+En realidad no es la única que nos ha bajado. El comando git branch, si lo lanzamos sin parámetros, nos lista las ramas locales. Pero si le pasamos el parámetro --all (o -a), nos mostrará tanto las locales como las remotas:
+
+```GIT
+git branch -a
+```
+
+Esas ramas remotas que vemos en el listado son copias locales de las ramas remotas. Como acabamos de hacer un git clone, esas copias estarán exactamente igual que en el repositorio remoto. Si queremos crear las correspondientes ramas locales, sólo tenemos que ir a cada una de las ramas, en este caso vamos a ir a "develop"
+
+```GIT
+git branch checkout develop
+```
+
+A partir de ahí podemos crear nuestras nuevas ramas
+
 # Creación Ramas
 
 - **main** viene por defecto una vez creado el repositorio
