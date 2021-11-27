@@ -51,7 +51,9 @@ Por ello, el mensaje de un commit se divide en 3 partes diferentes el tipo: tít
 El tipo es contenido en el título y puede ser de alguno de los siguientes casos:
 
 - 💫 FEAT: Una nueva característica.
+- 📝 TEXT: Cambios en textos (ejemplo añadir elementos a una lista). NO afecta a código
 - 🛠️ FIX: Se soluciono un bug.
+- 💅 STYLE: Cambios en los estilos.
 - 📚 DOCS: Se realizaron cambios en la documentación.
 - 🌈 PRETT: Se aplico formato, comas y puntos faltantes, etc; Sin cambios en el código.
 - ♻ REFACT: Refactorización del código en producción.

@@ -31,7 +31,7 @@ git flow init
 ### Crea una nueva rama para un feature a partir de la rama _develop_
 
 ```GIT
-git flow feature start users_add_user
+git flow feature start users_add-user
 ```
 
 A la rama creada se le agrega el tipo feature automaticamente. En este ejemplo el nombre final de la rama sería feature/users_add_user
@@ -59,6 +59,3 @@ Terminar un hotfix y unirlo a las ramas _main_ y _develop_
 ```GIT
 git flow hotfix finish users_add_user
 ```
-
-<!--
-https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow -->
