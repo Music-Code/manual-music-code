@@ -5,7 +5,12 @@
 
 @font-face {
     font-family: 'body';
-    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../fonts/Roboto-Black.ttf') format('truetype');
 }
 
 @font-face {
@@ -17,6 +22,21 @@
 * Padding horizontal normal
 */
 
+img{
+    margin: 60px 0;
+}
+strong {
+    font-family: 'bold';
+}
+
+p {
+    line-height: 2;
+}
+ul {
+    line-height: 2;
+}
+
+
 .p-h-n {
     padding: 0.4rem 1rem;
 }
@@ -25,6 +45,7 @@
     /**
     * This should match with the width of the nav / sidebar.
     */
+    background-color: #ffffff;
     margin-left: 18.75rem;
     overflow-x: auto;
     padding: 1rem 2rem;
@@ -390,4 +411,99 @@ blockquote {
 
 .rel {
     position: relative;
+}
+
+@media screen and (min-width: 70rem) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 10rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
+}
+
+@media screen and (min-width: 1400px) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 15rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
+}
+
+@media screen and (min-width: 1600px) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 20rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
+}
+@media screen and (min-width: 1800px) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 25rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
+}
+
+
+@media screen and (min-width: 2100px) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 35rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
+}
+@media screen and (min-width: 2250px) {
+
+
+    .main-content,
+    .footer {
+        margin-left: 20 !important;
+        padding: 1rem 40rem;
+
+    }
+
+    .method-member-container {
+        overflow: auto;
+    }
+    
 }
