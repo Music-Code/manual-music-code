@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9311868" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9104817" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
       
 
     </nav>
@@ -152,7 +152,7 @@ git switch -c feature/user_add_user
 <h3>Moverse a otras ramas</h3>
 <pre class="prettyprint source lang-GIT"><code>git switch nombre_rama
 
-# De otro forma
+# De otra forma
 git checkout nombre_rama
 </code></pre>
 <!-- ### Ver si tenemos la última actualización -->
@@ -170,6 +170,30 @@ git pull
 ```
 
 > Revisad que siempre estemos en la rama correspondiente y nunca en **main** o **develop** a no ser que sea estrictamente necesario. -->
+<h3>Nuevas ramas remotas durante el proyecto</h3>
+<p>¿Y si ya tenemos el repositorio clonado, llevamos un tiempo trabajando en él, y un día un miembro del equipo sube una rama nueva al repositorio remoto? ¿Nos tiene que avisar? ¿Tenemos que saber cómo se llama la nueva rama? No es necesario, vamos a ver cómo tener siempre actualizadas las copias locales de las ramas remotas.</p>
+<p>una vez que las ramas locales están vinculadas con las remotas, podemos usar git push y git pull sin necesidad de escribir el nombre de una rama. ¿Qué ocurre cuando yo escribo git pull a secas? Sabemos que el comando git pull en realidad lanza dos comandos secuencialmente: primero hace git fetch y luego git merge. Ese primer comando es el que nos interesa: ese fetch nos actualizará todas las copias locales de las ramas remotas, copiando las que haya nuevas. Es decir, cada vez que hacemos un git pull sin nombre de rama, estamos sincronizando nuestras copias de las remotas con las ramas remotas reales.</p>
+<pre class="prettyprint source lang-GIT"><code>git checkout nombre_rama
+</code></pre>
+<p>Para crear la rama local correspondiente, sólo tenemos que entrar en ella, como hacíamos justo después del git clone, y Git nos la creará a partir de la copia remota.</p>
+<h1>📌 AÑADIR COMMITS: GIT ADD</h1>
+<p>Para el git add <strong>NO</strong> usar '<em>git add .</em>' a no ser que sea muy necesario. Lo mejor es usar git add y poner los archivos modificados.</p>
+<p>Si ejecutamos</p>
+<pre class="prettyprint source lang-GIT"><code>git status
+</code></pre>
+<p>y obtenemos</p>
+<pre class="prettyprint source lang-TERMINAL"><code>Cambios no rastreados para el commit:
+  (usa &quot;git add &lt;archivo>...&quot; para actualizar lo que será confirmado)
+  (usa &quot;git restore &lt;archivo>...&quot; para descartar los cambios en el directorio de trabajo)
+        modificado:     tutorials/git-flow-guide.md
+        modificado:     tutorials/git-guide.md
+
+sin cambios agregados al commit (usa &quot;git add&quot; y/o &quot;git commit -a&quot;)
+user@MacBook-Pro-de-user folder %
+</code></pre>
+<p>para agregar los archivos debemos hacerlo así:</p>
+<pre class="prettyprint source lang-GIT"><code>git add tutorials/git-flow-guide.md tutorials/git-guide.md
+</code></pre>
 </article>
 
 </section>

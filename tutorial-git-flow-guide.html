@@ -83,7 +83,7 @@
   <body>
 
     <nav class="navbar" id="navbar">
-      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9311868" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
+      <div class="navbar-heading" id="navbar-heading"><a href="index.html"><h2 class="navbar-heading-text">Home</h2></a></div><div class="search-box" id="search-box"><div class="search-box-input-container"><input class="search-box-input" type="text" placeholder="Search..." id="search-box-input" /><svg class="search-icon" alt="search-icon"><use xlink:href="#search-icon"></use></svg></div><div class="search-item-container" id="search-item-container"><ul class="search-item-ul" id="search-item-ul"></ul></div></div><div class="sidebar-main-content" id="sidebar-main-content"><div class="accordion collapsed" id="9104817" > <h3 class="accordion-heading">Tutorials<svg><use xlink:href="#down-icon"></use></svg></h3><ul class="accordion-content"><li class="accordion-list" id=""><a href="tutorial-git-buenas-practicas.html">Git Buenas Prácticas</a></li><li class="accordion-list" id=""><a href="tutorial-git-flow-guide.html">GitFlow Comandos</a></li><li class="accordion-list" id=""><a href="tutorial-git-guide.html">Git Guía</a></li><li class="accordion-list" id=""><a href="tutorial-workflow.html">Workflow</a></li></ul> </div></div>
       
 
     </nav>
@@ -122,6 +122,14 @@
 <pre class="prettyprint source lang-GIT"><code>git clone https://github.com/Music-Code/backend.git
 </code></pre>
 <p>Ahora ya aparecerá nuestro repositorio en local y con la configuración del repositorio.</p>
+<p>Al abrir el repositorio podríamos pensar que sólo nos bajamos la rama principal (main) puesto que si ejecutamos el comando git branch sólo nos lista la rama main.</p>
+<p>En realidad no es la única que nos ha bajado. El comando git branch, si lo lanzamos sin parámetros, nos lista las ramas locales. Pero si le pasamos el parámetro --all (o -a), nos mostrará tanto las locales como las remotas:</p>
+<pre class="prettyprint source lang-GIT"><code>git branch -a
+</code></pre>
+<p>Esas ramas remotas que vemos en el listado son copias locales de las ramas remotas. Como acabamos de hacer un git clone, esas copias estarán exactamente igual que en el repositorio remoto. Si queremos crear las correspondientes ramas locales, sólo tenemos que ir a cada una de las ramas, en este caso vamos a ir a &quot;develop&quot;</p>
+<pre class="prettyprint source lang-GIT"><code>git branch checkout develop
+</code></pre>
+<p>A partir de ahí podemos crear nuestras nuevas ramas</p>
 <h1>Creación Ramas</h1>
 <ul>
 <li><strong>main</strong> viene por defecto una vez creado el repositorio</li>
